@@ -8,9 +8,15 @@ Built by [Dwight Pagán](https://github.com/paganld) · AI-Powered GEOINT
 
 ## Overview
 
-An intelligence analysis pipeline that generates synthetic Airborne ISR tracks (MQ-9 Reaper, RC-135 Rivet Joint, RQ-4 Global Hawk, P-8 Poseidon) over the Iran/Gulf region, performs DBSCAN clustering to detect loiter zones, and exports multi-format geospatial outputs including interactive heatmaps, GeoJSON, KML, and CSV analytics.
+An intelligence analysis pipeline that generates **synthetic** airborne ISR tracks (MQ-9 Reaper, RC-135 Rivet Joint, RQ-4 Global Hawk, P-8 Poseidon) over the Iran/Gulf region, performs DBSCAN clustering to detect loiter zones, and exports multi-format geospatial outputs including interactive heatmaps, GeoJSON, KML, and CSV analytics.
 
 Built as an open-source alternative to ArcGIS Pro for airborne ISR pattern analysis.
+
+## ⚠️ Data & Privacy
+
+All ISR tracks in this project are **synthetic (simulated)** for demonstration and research purposes only. No classified, real-time, or restricted flight data is included. Aircraft positions, tail numbers, flight patterns, and mission parameters are entirely fabricated. The geographic focus (Iran/Gulf region) is illustrative and does not correspond to any real-world intelligence operation.
+
+The OpenSky Network integration is provided for optional real ADS-B data fetching — all data sourced from the publicly available, unencrypted ADS-B broadcasts.
 
 ## Features
 
@@ -23,13 +29,15 @@ Built as an open-source alternative to ArcGIS Pro for airborne ISR pattern analy
 
 ## Tech Stack
 
-- **Python 3.9+** — Core pipeline
-- **Pandas / NumPy** — Data processing
-- **Folium** — Interactive map + heatmap
-- **Scikit-learn** — DBSCAN clustering
-- **GeoPandas** — GeoJSON export
-- **SimpleKML** — KML generation
-- **Plotly** — Analytics charts
+| Component | Technology |
+|-----------|-----------|
+| Language | Python 3.9+ |
+| Data Processing | Pandas, NumPy |
+| Mapping | Folium (interactive maps + heatmaps) |
+| ML / Clustering | Scikit-learn (DBSCAN) |
+| Geospatial | GeoPandas + Shapely (GeoJSON export) |
+| KML Export | SimpleKML |
+| Analytics | Plotly |
 
 ## Quick Start
 
@@ -63,20 +71,20 @@ python isr_dashboard.py
 | RQ-4 Global Hawk | High-altitude ISR | Transit / Racetrack | 55K–60K ft |
 | P-8 Poseidon | Maritime patrol | Maritime grid | 15K–28K ft |
 
-## Use Cases
+## Data Sources
 
-- **ISR Analysis** — Pattern-of-life detection for airborne intelligence assets
-- **Deconfliction Planning** — Identify overlapping patrol zones and loiter areas
-- **Geospatial Research** — Apply ML clustering to tactical movement data
-- **Training & Education** — Learn ISR concepts without classified systems
-- **Portfolio** — Full Python geospatial intelligence pipeline
+- [OpenSky Network](https://opensky-network.org/) — Open ADS-B flight data (optional)
+
+All data sources are publicly available and used in compliance with their respective terms of service.
 
 ## Author
 
 **Dwight Pagán** — Data Scientist & AI Engineer
+Building platforms that turn raw data into actionable intelligence.
+
 - GitHub: [@paganld](https://github.com/paganld)
-- LinkedIn: [dwightjosefpagan](https://linkedin.com/in/dwightjosefpagan)
+- LinkedIn: [linkedin.com/in/dwightjosefpagan](https://linkedin.com/in/dwightjosefpagan)
 
 ---
 
-*Part of the OrbitData platform family.*
+*Part of the OrbitData platform family — geospatial intelligence for the open-source community.*
